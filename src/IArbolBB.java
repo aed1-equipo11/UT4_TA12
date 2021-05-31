@@ -36,9 +36,13 @@ public interface IArbolBB<T> {
      *
      * @return Tama�o del arbol.
      */
-    public int obtenerTamanio();
+    IElementoAB<T> getRaiz();
+
+    int obtenerTamanio();
 
   
-    public void eliminar(Comparable unaEtiqueta);
+    void eliminar(Comparable unaEtiqueta);
+
+    void armarIndicesCarrreras(Lista<Carrera> carreras);
 
 }

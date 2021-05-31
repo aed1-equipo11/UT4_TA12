@@ -1,5 +1,5 @@
-public class TElementoABU extends TElementoAB<Alumno> implements IElementoABU{
-    public TElementoABU(String etiqueta, Alumno datos) {
+public class TElementoABU extends TElementoAB<Alumno> implements IElementoAB<Alumno> {
+    public TElementoABU(Comparable etiqueta, Alumno datos) {
         super(etiqueta, datos);
     }
 
@@ -20,7 +20,7 @@ public class TElementoABU extends TElementoAB<Alumno> implements IElementoABU{
             carreras.insertar(ndCarrera);
         }
 
-        TElementoAB<Alumno> elemento = new TElementoAB<Alumno>(this.getDatos().getApellido(), this.getDatos());
+        TElementoABU elemento = new TElementoABU(this.getDatos().getApellido(), this.getDatos());
         ndCarrera.getDato().getIndiceCarrera().insertar(elemento);
     }
 }

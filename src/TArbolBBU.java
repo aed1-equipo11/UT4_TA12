@@ -1,9 +1,18 @@
-public class TArbolBBU extends TArbolBB<Alumno> implements IArbolBBU {
+public class TArbolBBU extends TArbolBB<Alumno> implements IArbolBB<Alumno> {
+
+    public TArbolBBU() {
+        super();
+    }
+
+    @Override
+    public IElementoAB<Alumno> getRaiz() {
+        return (TElementoABU)raiz;
+    }
 
     @Override
     public void armarIndicesCarrreras(Lista<Carrera> carreras) {
-        if (raiz != null) {
-            ((TElementoABU)raiz).indizar(carreras);
+        if (getRaiz() != null) {
+            getRaiz().indizar(carreras);
         }
     }
 }

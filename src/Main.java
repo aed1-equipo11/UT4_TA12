@@ -23,7 +23,7 @@ public class Main {
                     String apellido = contenido[1];
                     String carrera = contenido[2];
                     Alumno alumno = new Alumno(codigo, apellido, carrera);
-                    TElementoAB<Alumno> elemento = new TElementoAB<Alumno>(carrera, alumno);
+                    TElementoABU elemento = new TElementoABU(codigo, alumno);
                     ucu.insertar(elemento);
                 }
                 catch (NumberFormatException e) { }
@@ -37,7 +37,7 @@ public class Main {
         ucu.armarIndicesCarrreras(listaCarreras);
         
         // escribir el archivo "unaCarrera.txt" con el nombre de la carrera indicada
-        Nodo<Carrera> c = listaCarreras.buscar("Informatica");
+        Nodo<Carrera> c = listaCarreras.buscar("Derecho");
         Lista<Alumno> alumnos = c.getDato().getIndiceCarrera().inorden();
         INodo<Alumno> aux = alumnos.getPrimero();
         String salida = "";

@@ -150,4 +150,8 @@ public class TElementoAB<T> implements IElementoAB<T> {
     public TElementoAB eliminar(Comparable unaEtiqueta) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public void indizar(Lista<Carrera> carreras)  {
+        System.out.println("punto");
+    };
 }

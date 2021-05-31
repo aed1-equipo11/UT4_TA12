@@ -82,4 +82,6 @@ public interface IElementoAB<T> {
 
    
     public TElementoAB eliminar(Comparable unaEtiqueta);
+
+    void indizar(Lista<Carrera> carreras);
 }
